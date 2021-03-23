@@ -30,6 +30,7 @@ func New(w io.Writer) *Alog {
 	}
 	return &Alog{
 		dest: w,
+		msgCh: make(chan string),
 	}
 }
 
